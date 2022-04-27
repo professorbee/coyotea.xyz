@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width">
+   <title>coyotea!</title>
+   <link href="./index.css" rel="stylesheet" />
+</head>
+
+<body class="bg-sky-200">
+   <div class="grid place-items-center h-screen">
+      <div class="flex-initial rounded-lg shadow-md w-2/3 min-w-fit max-w-sm bg-white h-fit m-4">
+         <img src="avi.webp" alt="picrew by djarn!" class="h-36 w-36 rounded-full mx-auto p-4">
+         <div class="text-center">
+            <p class="font-bold italic text-sky-500 text-lg">Coyotea!</p>
+            <p class="pb-4 px-4">{{mainDesc}}</p>
+            <div>
+               {{#each linkList}}
+               <div class="pb-2">
+                  <a href="{{this.url}}" rel="me">
+                     <button class="bg-cyan-500 hover:bg-cyan-400 rounded-full w-36 text-white p-2 font-bold">
+                        {{this.title}}
+                     </button>
+                  </a>
+               </div>
+               {{/each}}
+            </div>
+            <div class="pb-2"></div>
+         </div>
+      </div>
+   </div>
+</body>
+</html>
